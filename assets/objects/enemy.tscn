@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgrcw318pye6p"]
+
+[ext_resource type="Texture2D" uid="uid://dihmes85w8fyd" path="res://assets/sprites/characters.png" id="1_g2nmf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aiwc7"]
+radius = 9.0
+height = 26.0
+
+[node name="enemy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g2nmf")
+hframes = 20
+vframes = 20
+frame = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_aiwc7")

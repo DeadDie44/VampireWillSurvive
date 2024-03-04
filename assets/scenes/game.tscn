@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs4b5oajxr83c"]
+
+[ext_resource type="Texture2D" uid="uid://blgoo2wvkwbsa" path="res://assets/sprites/town.png" id="1_ckspe"]
+[ext_resource type="PackedScene" uid="uid://cxux8s4sfrkyc" path="res://assets/objects/player.tscn" id="2_y8fdm"]
+[ext_resource type="PackedScene" uid="uid://bgrcw318pye6p" path="res://assets/objects/enemy.tscn" id="3_sv6j5"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Town" type="Sprite2D" parent="."]
+position = Vector2(320, 191)
+texture = ExtResource("1_ckspe")
+
+[node name="player" parent="." instance=ExtResource("2_y8fdm")]
+position = Vector2(317, 176)
+
+[node name="enemy" parent="." instance=ExtResource("3_sv6j5")]
+position = Vector2(217, 116)
+
+[node name="enemy2" parent="." instance=ExtResource("3_sv6j5")]
+position = Vector2(359, 74)
+
+[node name="enemy3" parent="." instance=ExtResource("3_sv6j5")]
+position = Vector2(204, 238)
+
+[node name="enemy4" parent="." instance=ExtResource("3_sv6j5")]
+position = Vector2(405, 243)
+
+[node name="enemy5" parent="." instance=ExtResource("3_sv6j5")]
+position = Vector2(295, 285)
