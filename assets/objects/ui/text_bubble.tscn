@@ -7,7 +7,7 @@
 line_spacing = -4.0
 font = ExtResource("2_titjl")
 
-[node name="TextBubble" type="Node2D"]
+[node name="textBubble" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_8v21p")
