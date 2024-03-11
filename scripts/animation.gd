@@ -1,14 +1,17 @@
-extends Node2D
+extends AnimatedSprite2D
 
-var timer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
+	pass # Replace with function body.
+	play("default")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	timer += delta
-	if (timer > 3):
-		get_tree().change_scene_to_file("res://assets/scenes/tavern.tscn")
+	pass
+
+func toggleAnimation():
+	pass
+	
+func changeAnimation():
+	pass

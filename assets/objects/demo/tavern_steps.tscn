@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjw7dwyhcu1hq"]
+
+[ext_resource type="Texture2D" uid="uid://cyywehgipesxu" path="res://assets/sprites/tavern.png" id="1_va61g"]
+
+[node name="tavern_steps" type="Sprite2D"]
+texture = ExtResource("1_va61g")
+region_enabled = true
+region_rect = Rect2(345, 0, 50, 122)

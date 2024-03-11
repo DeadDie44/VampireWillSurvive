@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpspo0irxcilg"]
+
+[ext_resource type="Script" path="res://scripts/demo_manager.gd" id="1_thfgr"]
+
+[node name="demoManager" type="Node"]
+script = ExtResource("1_thfgr")

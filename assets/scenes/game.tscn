@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs4b5oajxr83c"]
+[gd_scene load_steps=6 format=3 uid="uid://bs4b5oajxr83c"]
 
 [ext_resource type="Texture2D" uid="uid://blgoo2wvkwbsa" path="res://assets/sprites/town.png" id="1_ckspe"]
 [ext_resource type="PackedScene" uid="uid://cxux8s4sfrkyc" path="res://assets/objects/player.tscn" id="2_y8fdm"]
 [ext_resource type="PackedScene" uid="uid://bgrcw318pye6p" path="res://assets/objects/enemy.tscn" id="3_sv6j5"]
+[ext_resource type="PackedScene" uid="uid://b842ar2mb5i" path="res://assets/objects/animation.tscn" id="4_4uwdp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mefm"]
 size = Vector2(332, 206)
@@ -40,3 +41,6 @@ position = Vector2(295, 285)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="House Comtainer/StaticBody2D"]
 position = Vector2(-9, 29)
 shape = SubResource("RectangleShape2D_4mefm")
+
+[node name="animation" parent="." instance=ExtResource("4_4uwdp")]
+position = Vector2(272, 176)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxlbs0iy4wvib"]
+
+[ext_resource type="Texture2D" uid="uid://cyywehgipesxu" path="res://assets/sprites/tavern.png" id="1_aajv7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_of84d"]
+radius = 33.0151
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="tavern_table" type="Sprite2D" parent="."]
+texture = ExtResource("1_aajv7")
+region_enabled = true
+region_rect = Rect2(346, 122, 64, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_of84d")

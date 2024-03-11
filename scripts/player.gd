@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
 const ACCELERATION = 96
-const MAX_SPEED  = 64
-const ROLL_SPEED = 100
+const MAX_SPEED  = 72
 const FRICTION = 244
 
 enum {

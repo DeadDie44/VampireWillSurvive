@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1rtor5mks06j"]
+
+[ext_resource type="PackedScene" uid="uid://dbauo7008jcmf" path="res://assets/objects/demo/tavern_room.tscn" id="1_it2rg"]
+[ext_resource type="PackedScene" uid="uid://1kw3q5ffv5fj" path="res://assets/objects/demo/tavern_support.tscn" id="2_fsso5"]
+[ext_resource type="PackedScene" uid="uid://bjw7dwyhcu1hq" path="res://assets/objects/demo/tavern_steps.tscn" id="3_pt8po"]
+[ext_resource type="PackedScene" uid="uid://cuuoylpfnpspb" path="res://assets/objects/demo/tavern_stool.tscn" id="4_081ik"]
+[ext_resource type="PackedScene" uid="uid://bxlbs0iy4wvib" path="res://assets/objects/demo/tavern_table.tscn" id="5_nhiqy"]
+[ext_resource type="PackedScene" uid="uid://cwwgrgcpk8v74" path="res://assets/objects/demo/tavern_counter.tscn" id="6_7c7lr"]
+[ext_resource type="PackedScene" uid="uid://bu3uxvkjwe51o" path="res://assets/objects/demo/demo_character.tscn" id="6_gsp83"]
+
+[node name="tavern" type="Node2D"]
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="tavern_room" parent="background" instance=ExtResource("1_it2rg")]
+
+[node name="tavern_support2" parent="background" instance=ExtResource("2_fsso5")]
+position = Vector2(165, -106)
+
+[node name="tavern_support" parent="background/tavern_support2" instance=ExtResource("2_fsso5")]
+position = Vector2(-93, 0)
+
+[node name="tavern_support" parent="background" instance=ExtResource("2_fsso5")]
+position = Vector2(-23, -106)
+
+[node name="tavern_steps" parent="background" instance=ExtResource("3_pt8po")]
+position = Vector2(-145, -82)
+
+[node name="tavern_stool2" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(-113, 107)
+
+[node name="tavern_stool3" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(-73, 72)
+
+[node name="tavern_stool9" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(156, 101)
+
+[node name="tavern_stool8" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(119, 32)
+
+[node name="tavern_stool7" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(83, 92)
+
+[node name="tavern_stool6" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(150, 10)
+
+[node name="tavern_stool5" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(148, -63)
+
+[node name="tavern_stool4" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(85, -31)
+
+[node name="tavern_stool" parent="background" instance=ExtResource("4_081ik")]
+position = Vector2(-158, 65)
+
+[node name="tavern_table2" parent="background" instance=ExtResource("5_nhiqy")]
+position = Vector2(127, -32)
+
+[node name="tavern_table3" parent="background" instance=ExtResource("5_nhiqy")]
+position = Vector2(124, 70)
+
+[node name="tavern_table" parent="background" instance=ExtResource("5_nhiqy")]
+position = Vector2(-116, 64)
+
+[node name="characters" type="Node2D" parent="."]
+
+[node name="demoCharacter" parent="characters" instance=ExtResource("6_gsp83")]
+
+[node name="foreground" type="Node2D" parent="."]
+
+[node name="tavern_counter" parent="foreground" instance=ExtResource("6_7c7lr")]
+position = Vector2(-43, -83)
+
+[node name="Camera2D" type="Camera2D" parent="."]

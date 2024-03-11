@@ -1,0 +1,82 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://b0p1f1dtlgbql"]
+
+[ext_resource type="Texture2D" uid="uid://dihmes85w8fyd" path="res://assets/sprites/characters.png" id="1_lqmxa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh5af"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(0, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aktdu"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(48, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdcfp"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(0, 384, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmcus"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(48, 384, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5gjc"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(0, 432, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6b1l"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(48, 432, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nuui"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(0, 480, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3taau"]
+atlas = ExtResource("1_lqmxa")
+region = Rect2(48, 480, 48, 48)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh5af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aktdu")
+}],
+"loop": true,
+"name": &"idle_shrouded",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdcfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmcus")
+}],
+"loop": true,
+"name": &"idle_stanger1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5gjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6b1l")
+}],
+"loop": true,
+"name": &"idle_stanger2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nuui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3taau")
+}],
+"loop": true,
+"name": &"idle_stanger3",
+"speed": 5.0
+}]

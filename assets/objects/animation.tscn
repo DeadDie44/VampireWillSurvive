@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b842ar2mb5i"]
+
+[ext_resource type="SpriteFrames" uid="uid://b0p1f1dtlgbql" path="res://assets/animations/demo_animations.tres" id="1_xosjl"]
+[ext_resource type="Script" path="res://scripts/animation.gd" id="2_v2ulo"]
+
+[node name="animation" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_xosjl")
+animation = &"idle_shrouded"
+autoplay = "idle_stanger1"
+frame_progress = 0.685592
+speed_scale = 0.5
+script = ExtResource("2_v2ulo")
