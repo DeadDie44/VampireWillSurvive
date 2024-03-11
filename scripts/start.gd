@@ -10,5 +10,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	timer += delta
-	if (timer > 3):
-		get_tree().change_scene_to_file("res://assets/scenes/tavern.tscn")
+	if (timer > 1):
+		get_tree().change_scene_to_file("res://assets/scenes/demo_tavern.tscn")
