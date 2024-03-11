@@ -68,14 +68,17 @@ position = Vector2(-116, 64)
 
 [node name="innkeeper" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-46, -66)
+animation = &"idle_innkeeper"
 frame_progress = 0.0
 
 [node name="shrouded" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-24, 126)
+animation = &"idle_shrouded"
 frame_progress = 0.0
 
 [node name="stranger1" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-158, 60)
+animation = &"idle_stranger1"
 frame_progress = 0.0
 
 [node name="stranger2" parent="characters" instance=ExtResource("6_lw10j")]
@@ -84,7 +87,7 @@ frame_progress = 0.0
 
 [node name="stranger3" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(156, 94)
-animation = &"move_shrouded"
+animation = &"move_stranger3"
 frame_progress = 0.0
 
 [node name="foreground" type="Node2D" parent="."]
