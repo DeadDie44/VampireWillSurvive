@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwoxwcmks8r22"]
+
+[ext_resource type="Texture2D" uid="uid://dihmes85w8fyd" path="res://assets/sprites/characters.png" id="1_cgt24"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85dnd"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(0, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a76k8"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(48, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d6bk"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(96, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsike"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(144, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygqoj"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(192, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouixw"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(240, 576, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jj0mo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85dnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a76k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d6bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsike")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygqoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouixw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bloodExplosion" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_jj0mo")

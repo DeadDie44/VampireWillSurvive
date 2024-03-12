@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://p0krlcgwwd7x"]
+[gd_scene load_steps=3 format=3 uid="uid://p0krlcgwwd7x"]
 
 [ext_resource type="Texture2D" uid="uid://dcodquk8jvfuu" path="res://assets/sprites/uii.png" id="1_8v21p"]
-[ext_resource type="FontFile" uid="uid://dpofo6rsk0o1" path="res://assets/font/m3x6.ttf" id="2_titjl"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_tlgja"]
-line_spacing = -4.0
-font = ExtResource("2_titjl")
+[ext_resource type="LabelSettings" uid="uid://ce6tllls37hv0" path="res://assets/objects/ui/text_bubble.tres" id="2_sjguo"]
 
 [node name="textBubble" type="Node2D"]
 
@@ -20,6 +16,6 @@ offset_top = -25.0
 offset_right = 59.0
 offset_bottom = 18.0
 text = "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown "
-label_settings = SubResource("LabelSettings_tlgja")
+label_settings = ExtResource("2_sjguo")
 autowrap_mode = 3
 clip_text = true

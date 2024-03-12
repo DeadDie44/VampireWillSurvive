@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn6sq7l2wjbhn"]
+[gd_scene load_steps=11 format=3 uid="uid://dn6sq7l2wjbhn"]
 
 [ext_resource type="PackedScene" uid="uid://dbauo7008jcmf" path="res://assets/objects/demo/tavern_room.tscn" id="1_tgkf1"]
 [ext_resource type="Script" path="res://scripts/demo_manager.gd" id="1_y2xb1"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bxlbs0iy4wvib" path="res://assets/objects/demo/tavern_table.tscn" id="5_7pbom"]
 [ext_resource type="PackedScene" uid="uid://b842ar2mb5i" path="res://assets/objects/animation.tscn" id="6_lw10j"]
 [ext_resource type="PackedScene" uid="uid://cwwgrgcpk8v74" path="res://assets/objects/demo/tavern_counter.tscn" id="7_ad3rl"]
+[ext_resource type="LabelSettings" uid="uid://c4b817ga770st" path="res://assets/objects/ui/text_good.tres" id="9_k476e"]
+[ext_resource type="LabelSettings" uid="uid://d2g4r4vowbkhs" path="res://assets/objects/ui/text_evil.tres" id="10_5lpso"]
 
 [node name="tavern" type="Node2D"]
 script = ExtResource("1_y2xb1")
@@ -68,31 +70,50 @@ position = Vector2(-116, 64)
 
 [node name="innkeeper" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-46, -66)
-animation = &"idle_innkeeper"
-frame_progress = 0.0
+animation = &"down_idle_innkeeper"
 
 [node name="shrouded" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-24, 126)
-animation = &"idle_shrouded"
-frame_progress = 0.0
+animation = &"up_move_shrouded"
 
 [node name="stranger1" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(-158, 60)
-animation = &"idle_stranger1"
-frame_progress = 0.0
+animation = &"down_idle_stranger1"
 
 [node name="stranger2" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(84, -36)
-frame_progress = 0.0
 
 [node name="stranger3" parent="characters" instance=ExtResource("6_lw10j")]
 position = Vector2(156, 94)
-animation = &"move_stranger3"
-frame_progress = 0.0
+animation = &"down_idle_stranger3"
 
 [node name="foreground" type="Node2D" parent="."]
 
 [node name="tavern_counter" parent="foreground" instance=ExtResource("7_ad3rl")]
 position = Vector2(-43, -83)
+
+[node name="hintLabel1" type="Label" parent="foreground"]
+offset_left = 12.0
+offset_top = 123.0
+offset_right = 93.0
+offset_bottom = 146.0
+text = "Press 'E' to continue..."
+label_settings = ExtResource("9_k476e")
+
+[node name="evilLabel" type="Label" parent="foreground"]
+offset_left = 12.0
+offset_top = 123.0
+offset_right = 93.0
+offset_bottom = 146.0
+text = "Evil Choice!"
+label_settings = ExtResource("10_5lpso")
+
+[node name="goodLabel" type="Label" parent="foreground"]
+offset_left = 12.0
+offset_top = 123.0
+offset_right = 93.0
+offset_bottom = 146.0
+text = "Good Choice!"
+label_settings = ExtResource("9_k476e")
 
 [node name="Camera2D" type="Camera2D" parent="."]

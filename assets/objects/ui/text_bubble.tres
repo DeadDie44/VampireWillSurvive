@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ce6tllls37hv0"]
+
+[ext_resource type="FontFile" uid="uid://dpofo6rsk0o1" path="res://assets/font/m3x6.ttf" id="1_bsdys"]
+
+[resource]
+line_spacing = -4.0
+font = ExtResource("1_bsdys")
