@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://q051v3sgb58c"]
+
+[ext_resource type="Texture2D" uid="uid://ctw6t4yvx74yv" path="res://assets/sprites/evil_ending.png" id="1_ap2a6"]
+[ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="2_x527x"]
+
+[node name="badEnding" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_ap2a6")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 99.0
+offset_bottom = 23.0
+text = "EVIL ENDING"
+
+[node name="screenFade" parent="." instance=ExtResource("2_x527x")]
+position = Vector2(320, 180)

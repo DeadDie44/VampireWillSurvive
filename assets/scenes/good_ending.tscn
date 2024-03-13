@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyecyk00ul6vq"]
+
+[ext_resource type="Texture2D" uid="uid://1tjyt3e8sr7b" path="res://assets/sprites/good_ending.png" id="1_rtcob"]
+[ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="2_agvxv"]
+
+[node name="goodEnding" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_rtcob")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "GOOD ENDING"
+
+[node name="screenFade" parent="." instance=ExtResource("2_agvxv")]
+position = Vector2(320, 180)

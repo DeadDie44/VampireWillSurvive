@@ -5,6 +5,6 @@
 
 [node name="animation" type="AnimatedSprite2D"]
 sprite_frames = ExtResource("1_xosjl")
-animation = &"down_idle_stranger2"
+animation = &"death"
 speed_scale = 0.5
 script = ExtResource("2_v2ulo")

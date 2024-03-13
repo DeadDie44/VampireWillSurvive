@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn6sq7l2wjbhn"]
+[gd_scene load_steps=13 format=3 uid="uid://dn6sq7l2wjbhn"]
 
 [ext_resource type="PackedScene" uid="uid://dbauo7008jcmf" path="res://assets/objects/demo/tavern_room.tscn" id="1_tgkf1"]
 [ext_resource type="Script" path="res://scripts/demo_manager.gd" id="1_y2xb1"]
+[ext_resource type="Texture2D" uid="uid://bqhi0ntkxga7c" path="res://assets/sprites/background.png" id="2_22ntb"]
 [ext_resource type="PackedScene" uid="uid://1kw3q5ffv5fj" path="res://assets/objects/demo/tavern_support.tscn" id="2_65aec"]
 [ext_resource type="PackedScene" uid="uid://bjw7dwyhcu1hq" path="res://assets/objects/demo/tavern_steps.tscn" id="3_j02s3"]
 [ext_resource type="PackedScene" uid="uid://cuuoylpfnpspb" path="res://assets/objects/demo/tavern_stool.tscn" id="4_vfblu"]
@@ -10,11 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://cwwgrgcpk8v74" path="res://assets/objects/demo/tavern_counter.tscn" id="7_ad3rl"]
 [ext_resource type="LabelSettings" uid="uid://c4b817ga770st" path="res://assets/objects/ui/text_good.tres" id="9_k476e"]
 [ext_resource type="LabelSettings" uid="uid://d2g4r4vowbkhs" path="res://assets/objects/ui/text_evil.tres" id="10_5lpso"]
+[ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="12_1wlfv"]
 
 [node name="tavern" type="Node2D"]
 script = ExtResource("1_y2xb1")
 
 [node name="background" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="background"]
+show_behind_parent = true
+texture = ExtResource("2_22ntb")
 
 [node name="tavern_room" parent="background" instance=ExtResource("1_tgkf1")]
 
@@ -115,5 +121,7 @@ offset_right = 93.0
 offset_bottom = 146.0
 text = "Good Choice!"
 label_settings = ExtResource("9_k476e")
+
+[node name="screenFade" parent="." instance=ExtResource("12_1wlfv")]
 
 [node name="Camera2D" type="Camera2D" parent="."]

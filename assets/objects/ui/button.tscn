@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkpw28br0fq80"]
+
+[ext_resource type="Theme" uid="uid://dy866nd1hawo2" path="res://assets/objects/ui/button.tres" id="1_cq1nh"]
+
+[node name="Button" type="Button"]
+offset_right = 112.0
+offset_bottom = 19.0
+auto_translate = false
+localize_numeral_system = false
+theme = ExtResource("1_cq1nh")
+text = "Is this even a button"

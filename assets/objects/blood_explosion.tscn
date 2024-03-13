@@ -1,51 +1,120 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwoxwcmks8r22"]
+[gd_scene load_steps=18 format=3 uid="uid://dwoxwcmks8r22"]
 
 [ext_resource type="Texture2D" uid="uid://dihmes85w8fyd" path="res://assets/sprites/characters.png" id="1_cgt24"]
+[ext_resource type="Script" path="res://scripts/blood_explosion.gd" id="2_lgk6i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_85dnd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcd8k"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(0, 576, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a76k8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_awoxj"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(48, 576, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8d6bk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1v42"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(96, 576, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hsike"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcfnf"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(144, 576, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ygqoj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogcn6"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(192, 576, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ouixw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_17prq"]
 atlas = ExtResource("1_cgt24")
 region = Rect2(240, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2p3o"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(288, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntnfj"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(336, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16b5s"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(384, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mdwo"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(432, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_680c6"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(480, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n7mf"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(528, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eolob"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(576, 576, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xulfc"]
+atlas = ExtResource("1_cgt24")
+region = Rect2(624, 576, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jj0mo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_85dnd")
+"texture": SubResource("AtlasTexture_lcd8k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a76k8")
+"texture": SubResource("AtlasTexture_awoxj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8d6bk")
+"texture": SubResource("AtlasTexture_i1v42")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hsike")
+"texture": SubResource("AtlasTexture_tcfnf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ygqoj")
+"texture": SubResource("AtlasTexture_ogcn6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ouixw")
+"texture": SubResource("AtlasTexture_17prq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2p3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntnfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16b5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mdwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_680c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n7mf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eolob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulfc")
 }],
 "loop": true,
 "name": &"default",
@@ -54,3 +123,6 @@ animations = [{
 
 [node name="bloodExplosion" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_jj0mo")
+autoplay = "default"
+speed_scale = 1.3
+script = ExtResource("2_lgk6i")
