@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4gggmei57fs3"]
+[gd_scene load_steps=7 format=3 uid="uid://c4gggmei57fs3"]
 
 [ext_resource type="Script" path="res://scripts/start.gd" id="1_be672"]
 [ext_resource type="Texture2D" uid="uid://begyvth6cegon" path="res://assets/sprites/godot.png" id="2_d5eiu"]
 [ext_resource type="Texture2D" uid="uid://dv11xkwkj2p1s" path="res://assets/sprites/title.png" id="2_wabuy"]
 [ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="3_sheag"]
 [ext_resource type="FontFile" uid="uid://etl5jt0t4p1h" path="res://assets/font/m5x7.ttf" id="4_sqjtp"]
+[ext_resource type="PackedScene" uid="uid://dkpw28br0fq80" path="res://assets/objects/ui/button.tscn" id="6_3od43"]
 
 [node name="Start" type="Node2D"]
 script = ExtResource("1_be672")
 
-[node name="Title" type="Sprite2D" parent="."]
+[node name="title" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
 texture = ExtResource("2_wabuy")
 
@@ -28,3 +29,11 @@ text = "MADE WITH GODOT"
 
 [node name="screenFade" parent="." instance=ExtResource("3_sheag")]
 position = Vector2(320, 180)
+
+[node name="button" parent="." instance=ExtResource("6_3od43")]
+visible = false
+offset_left = 410.0
+offset_top = 226.0
+offset_right = 522.0
+offset_bottom = 245.0
+text = "Start Game"

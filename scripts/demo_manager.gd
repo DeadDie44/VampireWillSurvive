@@ -28,6 +28,8 @@ var dialogueProgress = 0
 var finalCoutdown = 0
 
 var destination = Vector2(-24, 5)
+var leaveDestination = Vector2(-24, 205)
+var strangerDestination = Vector2(10, 50)
 var textOffset = Vector2(65,-45)
 
 var moveStage = [0, 0, 0]
@@ -63,7 +65,7 @@ var endText = [
 var idleAnim = ["down_idle_stranger1", "down_idle_stranger2", "up_idle_stranger3"]
 
 var buttonArray = [
-	["I am a mere traveler.","Nobody you should be worried about."],
+	["I am a mere traveler.","Nobody for you to worry about."],
 	["Just passing by, I need some rest.","None of your buisness."],
 	["I won't cause any trouble...","I don't like your questions."]
 	]
@@ -159,12 +161,17 @@ func _process(delta):
 						#get_tree().change_scene_to_file("res://assets/scenes/bad_ending.tscn")
 					else:
 						setTextBubble(shrouded, endText[2])
+						shrouded.play("down_move_shrouded")
 						#Init evil game 
 						#get_tree().change_scene_to_file("res://assets/scenes/good_ending.tscn")
 					finalCoutdown += delta
 			else: 
 				finalCoutdown += delta
-				
+				if alignmentPoints >= 0:
+					shrouded.position = shrouded.position.move_toward(leaveDestination, delta * 30)
+					stranger3.position = stranger3.position.move_toward(strangerDestination, delta * 30)
+					stranger3.play("down_idle_stranger3")
+					
 			if alignmentPoints < 0 && finalCoutdown > 0.5 && !deathStarted:
 					deathStarted = true
 					var speed = 2

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnse5j0jwxt4l"]
+
+[ext_resource type="FontFile" uid="uid://etl5jt0t4p1h" path="res://assets/font/m5x7.ttf" id="1_tq856"]
+[ext_resource type="Script" path="res://scripts/textCrawl.gd" id="1_u4ndm"]
+
+[node name="textCrawl" type="Label"]
+offset_right = 638.0
+offset_bottom = 358.0
+theme_override_fonts/font = ExtResource("1_tq856")
+theme_override_font_sizes/font_size = 32
+text = "    They just couldn't leave you alone. They had to be suspicious, they had to be audacious!  You were simply passing by and these vermin had to pester you. You! And now you are angry, now you are furious. And as you rage grows so does your hunger. But before you could realise it they were gone. All of them. The entire city is no more but an empty husk. And all their blood is on your hands. 
+    One cannot simply run from their nature. No matter how much you tried it still comes down to this. No matter how much you despise yourself and your cursed blood. It doesn't change a thing. You are what you are. An undead abberation unfit to walk the path of mortal men."
+autowrap_mode = 3
+script = ExtResource("1_u4ndm")

@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyecyk00ul6vq"]
+[gd_scene load_steps=7 format=3 uid="uid://dyecyk00ul6vq"]
 
+[ext_resource type="Script" path="res://scripts/ending.gd" id="1_hot8c"]
 [ext_resource type="Texture2D" uid="uid://1tjyt3e8sr7b" path="res://assets/sprites/good_ending.png" id="1_rtcob"]
+[ext_resource type="FontFile" uid="uid://etl5jt0t4p1h" path="res://assets/font/m5x7.ttf" id="2_3o5my"]
 [ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="2_agvxv"]
+[ext_resource type="PackedScene" uid="uid://cnse5j0jwxt4l" path="res://assets/objects/ui/text_crawl.tscn" id="3_7yp5t"]
+[ext_resource type="PackedScene" uid="uid://dkpw28br0fq80" path="res://assets/objects/ui/button.tscn" id="6_he4s3"]
 
 [node name="goodEnding" type="Node2D"]
+script = ExtResource("1_hot8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -12,7 +17,18 @@ texture = ExtResource("1_rtcob")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_3o5my")
+theme_override_font_sizes/font_size = 32
 text = "GOOD ENDING"
 
 [node name="screenFade" parent="." instance=ExtResource("2_agvxv")]
 position = Vector2(320, 180)
+
+[node name="textCrawl" parent="." instance=ExtResource("3_7yp5t")]
+text = "Who... or rather whatever you are should not dictate your life choices. You are master of your own destiny. Even if the path you have chosen will lead to a clash with your past. Even if your family will end up being your sworn enemies, you will not hesitate to do what is right. Not by any arbitrary rules or postulates but because it is the right thing to do.
+And if in the end you won't be accepted. If in the mortal eyes you will still be nothing more than a monster, an undead abberation, then you will be willing to meet your fate as one..."
+
+[node name="Button" parent="." instance=ExtResource("6_he4s3")]
+theme_override_fonts/font = ExtResource("2_3o5my")
+theme_override_font_sizes/font_size = 16
+text = "To Title Screen"

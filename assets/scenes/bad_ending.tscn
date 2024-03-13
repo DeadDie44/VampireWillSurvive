@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://q051v3sgb58c"]
+[gd_scene load_steps=7 format=3 uid="uid://q051v3sgb58c"]
 
+[ext_resource type="Script" path="res://scripts/ending.gd" id="1_7i55t"]
 [ext_resource type="Texture2D" uid="uid://ctw6t4yvx74yv" path="res://assets/sprites/evil_ending.png" id="1_ap2a6"]
+[ext_resource type="FontFile" uid="uid://etl5jt0t4p1h" path="res://assets/font/m5x7.ttf" id="2_8tbs1"]
 [ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="2_x527x"]
+[ext_resource type="PackedScene" uid="uid://cnse5j0jwxt4l" path="res://assets/objects/ui/text_crawl.tscn" id="3_i5nfp"]
+[ext_resource type="PackedScene" uid="uid://dkpw28br0fq80" path="res://assets/objects/ui/button.tscn" id="6_vynpf"]
 
 [node name="badEnding" type="Node2D"]
+script = ExtResource("1_7i55t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -12,7 +17,18 @@ texture = ExtResource("1_ap2a6")
 [node name="Label" type="Label" parent="."]
 offset_right = 99.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_8tbs1")
+theme_override_font_sizes/font_size = 32
 text = "EVIL ENDING"
 
 [node name="screenFade" parent="." instance=ExtResource("2_x527x")]
 position = Vector2(320, 180)
+
+[node name="textCrawl" parent="." instance=ExtResource("3_i5nfp")]
+text = "    They just couldn't leave you alone. They had to be suspicious, they had to be audacious!  You were simply passing by and these vermin had to pester you. You! And now you are angry, now you are furious. And as your rage grows so does your hunger. But before you could realise it they were gone. All of them. The entire city is no more but an empty husk. And all their blood is on your hands. 
+    One cannot simply run from their nature. No matter how much you tried it still comes down to this. No matter how much you despise yourself and your cursed blood. It doesn't change a thing. You are what you are. An undead abberation unfit to walk the path of mortal men."
+
+[node name="Button" parent="." instance=ExtResource("6_vynpf")]
+theme_override_fonts/font = ExtResource("2_8tbs1")
+theme_override_font_sizes/font_size = 16
+text = "To Title Screen"
