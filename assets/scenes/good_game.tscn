@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://ief2knq1j1wa"]
+
+[ext_resource type="Script" path="res://scripts/good_game.gd" id="1_kr62j"]
+[ext_resource type="PackedScene" uid="uid://bnx7dehsfd0r3" path="res://assets/objects/ui/screen_fade.tscn" id="2_xf3po"]
+[ext_resource type="PackedScene" uid="uid://d0o7vuyj6pfux" path="res://assets/objects/good_player.tscn" id="3_ik18h"]
+[ext_resource type="Texture2D" uid="uid://cdqt478fcywtw" path="res://assets/sprites/forest_background.png" id="4_ta5pq"]
+[ext_resource type="PackedScene" uid="uid://hkk4nbsfo2hy" path="res://assets/objects/Thaddeus.tscn" id="5_b5oih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aw1w"]
+size = Vector2(640, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ho3av"]
+size = Vector2(56, 417)
+
+[node name="goodGame" type="Node2D"]
+script = ExtResource("1_kr62j")
+
+[node name="screenFade" parent="." instance=ExtResource("2_xf3po")]
+visible = false
+
+[node name="goodPlayer" parent="." instance=ExtResource("3_ik18h")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture = ExtResource("4_ta5pq")
+
+[node name="thaddeus" parent="." instance=ExtResource("5_b5oih")]
+position = Vector2(0, -50)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, -132)
+shape = SubResource("RectangleShape2D_1aw1w")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 133)
+shape = SubResource("RectangleShape2D_1aw1w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-285, 5)
+shape = SubResource("RectangleShape2D_ho3av")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(282, 6)
+shape = SubResource("RectangleShape2D_ho3av")

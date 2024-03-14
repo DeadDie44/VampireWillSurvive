@@ -19,11 +19,11 @@ func _process(delta):
 	
 	if timer > 1.0:
 		screenFade.fadeIn = false
-	if timer > 1.9:
+	if timer > 2.4:
 		godotScreen.visible = false
-	if timer > 2.3:
+	if timer > 2.5:
 		screenFade.fadeIn = true
-	if timer > 3:
+	if timer > 3.2:
 		button.visible = true
 		
 	if start == true:
@@ -32,7 +32,10 @@ func _process(delta):
 		button.visible = false
 		
 		if startTimer > 1:
-			get_tree().change_scene_to_file("res://assets/scenes/demo_tavern.tscn")
+			if OS.is_debug_build():
+				get_tree().change_scene_to_file("res://assets/scenes/good_game.tscn")
+			else:
+				get_tree().change_scene_to_file("res://assets/scenes/demo_tavern.tscn")
 
 func startGame():
 	start = true

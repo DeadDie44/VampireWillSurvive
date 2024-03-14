@@ -194,7 +194,7 @@ func _process(delta):
 					get_tree().change_scene_to_file("res://assets/scenes/bad_ending.tscn")
 				else:
 					#Init evil game 
-					get_tree().change_scene_to_file("res://assets/scenes/good_ending.tscn")
+					get_tree().change_scene_to_file("res://assets/scenes/good_game.tscn")
 
 func explodeActor(actor):
 	var explosion = explosionPath.instantiate()
